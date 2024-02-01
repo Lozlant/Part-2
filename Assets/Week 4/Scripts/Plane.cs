@@ -10,16 +10,24 @@ public class Plane : MonoBehaviour
     LineRenderer lineRenderer;
     Rigidbody2D rigidbody;
     Vector2 currentPosition;
-    public float speed=1f;
+    float speed;
     public AnimationCurve landing;
     public float timerValue;
+    public Sprite[] planeSprites= new Sprite[4];
     
     private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
+
         lineRenderer.positionCount = 1;
-        lineRenderer.SetPosition(0, transform.position);
+
+        lineRenderer.SetPosition(0, transform.position + new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0));
+        GetComponent<Transform>().rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+        speed = Random.Range(1f, 3f);
+        GetComponent<SpriteRenderer>().sprite = planeSprites[(int)Random.Range(0, 4)];
+        
+
 
     }
     private void FixedUpdate()
