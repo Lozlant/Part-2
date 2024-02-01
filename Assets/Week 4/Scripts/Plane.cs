@@ -14,6 +14,7 @@ public class Plane : MonoBehaviour
     public AnimationCurve landing;
     public float timerValue;
     public Sprite[] planeSprites= new Sprite[4];
+    public bool isLanding=false;
     
     private void Start()
     {
@@ -49,11 +50,7 @@ public class Plane : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (!GetComponent<SpriteRenderer>().isVisible)
-        {
-            Destroy(gameObject);
-        }
-            if (Input.GetKey(KeyCode.Space))
+        if (isLanding)
         {
             timerValue += 0.5f * Time.deltaTime;
             float interpolation = landing.Evaluate(timerValue);
@@ -62,7 +59,7 @@ public class Plane : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, interpolation);
+            transform.localScale = Vector3.Lerp(Vector3.one*5, Vector3.zero, interpolation);
         }
         lineRenderer.SetPosition(0, transform.position);
         if (points.Count > 0 )
@@ -98,15 +95,15 @@ public class Plane : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
+        if(collision.CompareTag("Plane"))GetComponent<SpriteRenderer>().color = Color.red;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        GetComponent<SpriteRenderer>().color = Color.white;
+        if (collision.CompareTag("Plane")) GetComponent<SpriteRenderer>().color = Color.white;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Vector3.Distance(GetComponent<Transform>().position, collision.gameObject.transform.position) <= 1f)
+        if (Vector3.Distance(GetComponent<Transform>().position, collision.gameObject.transform.position) <= 1f && collision.CompareTag("Plane"))
         {
             Destroy(collision.gameObject);
         }
