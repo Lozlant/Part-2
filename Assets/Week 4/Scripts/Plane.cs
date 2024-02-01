@@ -44,7 +44,16 @@ public class Plane : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        Vector3 posIncamera=Camera.main.WorldToViewportPoint(transform.position);
+        if (posIncamera.x < 0 || posIncamera.y < 0 || posIncamera.x > 1 || posIncamera.y > 1)
+        {
+            Destroy(gameObject);
+        }
+        if (!GetComponent<SpriteRenderer>().isVisible)
+        {
+            Destroy(gameObject);
+        }
+            if (Input.GetKey(KeyCode.Space))
         {
             timerValue += 0.5f * Time.deltaTime;
             float interpolation = landing.Evaluate(timerValue);
@@ -85,7 +94,21 @@ public class Plane : MonoBehaviour
             lineRenderer.positionCount++;
             lineRenderer.SetPosition(lineRenderer.positionCount - 1, newPosition);
             lastPosition = newPosition;
+        }        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Vector3.Distance(GetComponent<Transform>().position, collision.gameObject.transform.position) <= 1f)
+        {
+            Destroy(collision.gameObject);
         }
-        
     }
 }
