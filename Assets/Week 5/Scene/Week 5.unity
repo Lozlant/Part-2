@@ -381,7 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3926529526433604970}
   - component: {fileID: 6013843120508002146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,6 +621,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2304917304041331680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3135957703984819976, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_Name
+      value: weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605868976490306517, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: knight
+      value: 
+      objectReference: {fileID: 6793470889191984773}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376272252271939144, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26369099313573a42ad16cf7d3f119cf, type: 3}
 --- !u!4 &2449587520531524949
 Transform:
   m_ObjectHideFlags: 0
@@ -677,7 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7317116855109781473}
   - component: {fileID: 4748874794080518779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3282708393260923180}
   - component: {fileID: 9047152906795173991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8244911289019899627}
   - component: {fileID: 2081019447230545318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6087148684138131194}
   - component: {fileID: 8345405859290549264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3281953465871327693}
   - component: {fileID: 1209307977439563528}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,12 +1011,12 @@ GameObject:
   - component: {fileID: 2449587520531524949}
   - component: {fileID: 6793470889191984776}
   - component: {fileID: 6793470889191984778}
+  - component: {fileID: 6793470889191984777}
   - component: {fileID: 6793470889191984775}
   - component: {fileID: 6793470889191984774}
-  - component: {fileID: 6793470889191984777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Knight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -989,7 +1050,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.09306842, y: 0.8686393}
@@ -1091,7 +1152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2014907184667988645}
   - component: {fileID: 9172652097499071702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1108,7 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7653597683801747510}
   - component: {fileID: 5923799499099439472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1330,3 +1391,4 @@ SceneRoots:
   - {fileID: 1072717102035367839}
   - {fileID: 1709271628}
   - {fileID: 1771427865}
+  - {fileID: 2304917304041331680}
