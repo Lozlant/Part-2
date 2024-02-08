@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour
     Rigidbody2D rb;
     Vector3 movement = new Vector3(-4,0,0);
     float timer=0, timeExit=5;
-    public GameObject knight;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +34,7 @@ public class Weapon : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            knight.SendMessage("TakeDamage", 1);
+            collision.gameObject.SendMessage("TakeDamage", 1);
             Destroy(gameObject);
         }
         
