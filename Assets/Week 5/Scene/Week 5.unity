@@ -353,6 +353,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1122999902862031761, guid: 49b81783809989847a82008851502ce1, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122999902862031761, guid: 49b81783809989847a82008851502ce1, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1234934954069860891, guid: 49b81783809989847a82008851502ce1, type: 3}
       propertyPath: m_Name
       value: CampFire

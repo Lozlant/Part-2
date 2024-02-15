@@ -8,9 +8,6 @@ public class Fire : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            collision.gameObject.SendMessage("TakeDamage", 5, SendMessageOptions.DontRequireReceiver);
-        }
+        collision.gameObject.SendMessage("TakeDamage", 5, SendMessageOptions.DontRequireReceiver);
     }
 }
