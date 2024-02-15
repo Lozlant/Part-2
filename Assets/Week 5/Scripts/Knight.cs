@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Knight : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class Knight : MonoBehaviour
     {
         if (isDead) return;
 
-        if (Input.GetMouseButtonDown(0) && !clickingOnSelf)
+        if (Input.GetMouseButtonDown(0) && !clickingOnSelf && !EventSystem.current.IsPointerOverGameObject())
         {
             destination=Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
@@ -69,6 +70,7 @@ public class Knight : MonoBehaviour
         if(health == 0)
         {
             isDead = true;
+            destination = (Vector2)transform.position;
             animator.SetTrigger("Death");
             
         }
