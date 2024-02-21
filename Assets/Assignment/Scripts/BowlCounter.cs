@@ -16,7 +16,7 @@ public class BowlCounter : MonoBehaviour
     public Sprite[] sprites = new Sprite[4];
     public Sprite[] highlightSprites = new Sprite[4];
 
-    int juiceType;
+    public int juiceType;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,6 @@ public class BowlCounter : MonoBehaviour
         {
             //Debug.Log("Active");
             player.juicing(bowl);
-            player.setHeadOn(0);//must after juicing
         }
     }
 
