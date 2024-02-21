@@ -12,6 +12,9 @@ public class Counter : MonoBehaviour
     public SpriteRenderer counterSpiritRenderer;
     public Sprite highlightSprite;
     Sprite sprite;
+
+    protected bool isArrivedCounter = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,16 @@ public class Counter : MonoBehaviour
     {
         counterSpiritRenderer.sprite = sprite;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isArrivedCounter = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isArrivedCounter = false;
+    }
+
 
 
 }

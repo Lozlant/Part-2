@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
 {
     public float speed=5;
     Vector2 destination, finalFacing;
+    public GameObject headObject;
+    public Sprite[] headsprites = new Sprite[8];
+    int objectHeading = 0;
 
     Rigidbody2D rb;
     Animator animator;
@@ -57,4 +60,19 @@ public class Player : MonoBehaviour
         destination = des;
         finalFacing = facing;
     }
+    public void setHeadOn(int n)//n=0 Null, 1 watermelon, 2 pear, 3 orange, 4 cup, 5 watermelon_cup, 6 pear_cup, 7 orange_cup 
+    {
+        objectHeading = n;
+        if (n == 0)
+        {
+            headObject.SetActive(false);
+        }
+        headObject.SetActive(true);
+        headObject.GetComponent<SpriteRenderer>().sprite = headsprites[n];
+    }
+    /*public void juilcing(BowlCounter bowl)
+    {
+        if (objectHeading < 0 || objectHeading > 3) return;
+        bowl.changeJuilce(objectHeading);
+    }*/
 }
