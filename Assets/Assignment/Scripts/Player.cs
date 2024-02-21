@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
     }
     public void setHeadOn(int n)//n=0 Null, 1 watermelon, 2 pear, 3 orange, 4 cup, 5 watermelon_cup, 6 pear_cup, 7 orange_cup 
     {
-        Debug.Log(n);
+        //Debug.Log(n);
         objectHeading = n;
         if (n == 0)
         {
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
     }
     public void juicing(BowlCounter bowl)
     {
-        Debug.Log(objectHeading);
+        //Debug.Log(objectHeading);
         if (objectHeading < 1 || objectHeading > 4) return;
         if (objectHeading == 4)
         {
