@@ -13,7 +13,7 @@ public class FruitCounter : Counter
     {
         if (Input.GetMouseButtonDown(1) && isArrivedCounter)
         {
-            Debug.Log("Active");
+            //Debug.Log("Active");
             player.setHeadOn(objectHeading);
         }
     }

@@ -67,12 +67,16 @@ public class Player : MonoBehaviour
         {
             headObject.SetActive(false);
         }
-        headObject.SetActive(true);
-        headObject.GetComponent<SpriteRenderer>().sprite = headsprites[n];
+        else
+        {
+            headObject.SetActive(true);
+            headObject.GetComponent<SpriteRenderer>().sprite = headsprites[n];
+        }
     }
-    /*public void juilcing(BowlCounter bowl)
+    public void juicing(BowlCounter bowl)
     {
-        if (objectHeading < 0 || objectHeading > 3) return;
-        bowl.changeJuilce(objectHeading);
-    }*/
+        //Debug.Log(objectHeading);
+        if (objectHeading < 1 || objectHeading > 3) return;
+        bowl.changeJuice(objectHeading);
+    }
 }
