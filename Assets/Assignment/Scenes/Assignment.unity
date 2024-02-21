@@ -935,6 +935,8 @@ MonoBehaviour:
   player: {fileID: 1314372834}
   horFacing: 0
   verFacing: 1
+  counterSpiritRenderer: {fileID: 1569231202}
+  highlightSprite: {fileID: -149794914, guid: 3a972816b2ebabe4b9a4ddf663c5c359, type: 3}
 --- !u!61 &989207440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1057,6 +1059,8 @@ MonoBehaviour:
   player: {fileID: 1314372834}
   horFacing: 1
   verFacing: 0
+  counterSpiritRenderer: {fileID: 1448986272}
+  highlightSprite: {fileID: 1044611697, guid: 3a972816b2ebabe4b9a4ddf663c5c359, type: 3}
 --- !u!61 &1021735882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1179,6 +1183,8 @@ MonoBehaviour:
   player: {fileID: 1314372834}
   horFacing: 0
   verFacing: 1
+  counterSpiritRenderer: {fileID: 1323057136}
+  highlightSprite: {fileID: 1822487087, guid: 3a972816b2ebabe4b9a4ddf663c5c359, type: 3}
 --- !u!61 &1305614823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1844,6 +1850,8 @@ MonoBehaviour:
   player: {fileID: 1314372834}
   horFacing: 1
   verFacing: 0
+  counterSpiritRenderer: {fileID: 645448625}
+  highlightSprite: {fileID: -358926428, guid: 3a972816b2ebabe4b9a4ddf663c5c359, type: 3}
 --- !u!61 &1459649168
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1966,6 +1974,8 @@ MonoBehaviour:
   player: {fileID: 1314372834}
   horFacing: -1
   verFacing: 0
+  counterSpiritRenderer: {fileID: 929311908}
+  highlightSprite: {fileID: -435205119, guid: b0a7f6681b2df3e479472fe3a71d7800, type: 3}
 --- !u!61 &1492451024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2088,6 +2098,8 @@ MonoBehaviour:
   player: {fileID: 1314372834}
   horFacing: 1
   verFacing: 0
+  counterSpiritRenderer: {fileID: 716907629}
+  highlightSprite: {fileID: -643539877, guid: 3a972816b2ebabe4b9a4ddf663c5c359, type: 3}
 --- !u!61 &1554200654
 BoxCollider2D:
   m_ObjectHideFlags: 0
