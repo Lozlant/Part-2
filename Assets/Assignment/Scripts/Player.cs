@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     Vector2 destination, finalFacing;
     public GameObject headObject;
     public Sprite[] headsprites = new Sprite[8];
-    int objectHeading = 0;
+    public int objectHeading = 0;
 
     Rigidbody2D rb;
     Animator animator;

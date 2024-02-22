@@ -356,10 +356,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   maxTimer: 20
+  juiceType: 0
   juiceSprites:
   - {fileID: -729563449, guid: d2f3f73c68b9f55469b8054edbc2898b, type: 3}
   - {fileID: 753137654, guid: d2f3f73c68b9f55469b8054edbc2898b, type: 3}
   - {fileID: -580225580, guid: d2f3f73c68b9f55469b8054edbc2898b, type: 3}
+  scoreText: {fileID: 0}
 --- !u!1 &8688291255362038526
 GameObject:
   m_ObjectHideFlags: 0

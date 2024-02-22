@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using Unity.VisualScripting;
+using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 public class Order : MonoBehaviour
 {
@@ -18,11 +20,15 @@ public class Order : MonoBehaviour
     Vector3 destination;
     float animationTimerValue=0f;
 
-    int juiceType=0;
+    public int juiceType=0;
     public Sprite[] juiceSprites= new Sprite[3];
 
-    int state=-1;
+    int state=0;
     Vector3 startPosition;
+
+    int score = 0;
+    public TextMeshProUGUI scoreText;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +37,10 @@ public class Order : MonoBehaviour
         startPosition = transform.position;
         destination = transform.position+new Vector3(800f,0f,0f);
 
+        scoreText.text = "$$ " + score.ToString();
         slider.maxValue = maxTimer;
-        gameObject.SetActive(false);
+        reset();
+
     }
 
     // Update is called once per frame
@@ -40,8 +48,6 @@ public class Order : MonoBehaviour
     {
         switch (state)
         {
-            case -1:
-                return;
             case 0: //
                 animationTimerValue += 1f * Time.deltaTime;
                 float interpolation = appear.Evaluate(animationTimerValue);
@@ -55,8 +61,12 @@ public class Order : MonoBehaviour
             case 1://count down
                 timer += Time.deltaTime;
                 slider.value = maxTimer - timer;
-                break;
-            case 2:
+                if (timer >= maxTimer)
+                {
+                    score -= 200;
+                    scoreText.text = "$$ " + score.ToString();
+                    reset();
+                }
                 break;
         }
         
@@ -70,8 +80,27 @@ public class Order : MonoBehaviour
         cup.sprite = juiceSprites[juiceType];
 
         transform.position = startPosition;
+        slider.value=slider.maxValue;
 
         state = 0;
 
+    }
+
+    public void matchOrder(int heading)
+    {
+        if (heading == -5) return;
+        Debug.Log(heading);
+
+        if(juiceType == heading)
+        {
+            score+=100;
+        }
+        else
+        {
+            score -= 200;
+        }
+
+        scoreText.text = "$$ " + score.ToString();
+        reset();
     }
 }
