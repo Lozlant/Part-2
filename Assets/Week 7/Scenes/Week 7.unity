@@ -835,6 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goalkeeperRb: {fileID: 583897055}
   maxDistance: 3
+  speed: 3
 --- !u!4 &470448348
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class GoalkeeperController : MonoBehaviour
 {
     public Rigidbody2D goalkeeperRb;
     public float maxDistance=3;
+    public float speed=3;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class GoalkeeperController : MonoBehaviour
         //Debug.Log(distance.magnitude);
         if (distance.magnitude > maxDistance * 2) target = (Vector2)transform.position + distance.normalized * maxDistance;
         else target = (Vector2)transform.position + distance * 0.5f;
-        goalkeeperRb.MovePosition(target);
+        goalkeeperRb.MovePosition(Vector2.MoveTowards(goalkeeperRb.position, target, speed * Time.deltaTime));
     }
     // Update is called once per frame
     void Update()
