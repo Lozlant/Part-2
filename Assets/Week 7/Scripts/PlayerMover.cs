@@ -34,6 +34,6 @@ public class PlayerMover : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Selected(true);
+        Controller.SetSelectedPlayer(this);
     }
 }
