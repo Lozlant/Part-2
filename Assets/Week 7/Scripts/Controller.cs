@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Controller : MonoBehaviour
 {
@@ -11,7 +12,15 @@ public class Controller : MonoBehaviour
     public float maxCharge = 1;
     Vector2 direction;
 
+    public TextMeshProUGUI scoreLable;
+
     public static PlayerMover selectedPlayer { get; private set; }
+    public static int score { get; private set; }
+
+    public static void SetScore(int sc)
+    {
+        score = sc;
+    }
 
     public static void SetSelectedPlayer(PlayerMover player)
     {
@@ -37,6 +46,7 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
+        scoreLable.text = "Score : " + score.ToString();
         if (selectedPlayer == null) return;
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -54,7 +64,6 @@ public class Controller : MonoBehaviour
         {
             direction = ((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)selectedPlayer.transform.position).normalized * charge;
         }
-
     }
 
 }
